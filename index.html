@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Armstrong Analyzer | Iteratif vs Rekursif</title>
+
+  <!-- FONT & ICON -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CHART -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- STYLE -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <h1><i class="fa-solid fa-crown"></i> Armstrong Algorithm Analyzer</h1>
+  <p>Perbandingan Algoritma Iteratif dan Rekursif Berbasis Runtime Nyata</p>
+</header>
+
+<!-- CONTROL PANEL -->
+<section class="controls">
+  <div class="card">
+    <label><i class="fa-solid fa-hashtag"></i> Bilangan</label>
+    <input type="number" id="numberInput" placeholder="153">
+  </div>
+
+  <div class="card">
+    <label><i class="fa-solid fa-repeat"></i> Jumlah Pengulangan</label>
+    <input type="number" id="repeatInput" value="1000">
+  </div>
+
+  <button class="primary-btn" onclick="runAnalysis()">
+    <i class="fa-solid fa-play"></i> Jalankan Analisis
+  </button>
+</section>
+
+<!-- STATUS -->
+<section class="status" id="statusBox"></section>
+
+<!-- GRAPH 1 -->
+<section class="panel">
+  <h2><i class="fa-solid fa-chart-column"></i> Grafik 1 — Perbandingan Runtime</h2>
+  <p class="axis">
+  Sumbu X: Jenis Algoritma |
+  Sumbu Y: Rata-rata Waktu Eksekusi (ms)
+    </p>
+
+  <canvas id="barChart"></canvas>
+</section>
+
+<!-- GRAPH 2 -->
+<section class="panel">
+  <h2><i class="fa-solid fa-chart-line"></i> Grafik 2 — Analisis Armstrong Bertingkat</h2>
+  <p class="axis">
+    Sumbu X: Urutan Bilangan Armstrong (kecil → besar) |
+    Sumbu Y: Waktu Eksekusi (ms)
+  </p>
+  <canvas id="lineChart"></canvas>
+</section>
+
+<!-- GRAPH 3 -->
+<section class="panel">
+  <h2><i class="fa-solid fa-wave-square"></i> Grafik 3 — Analisis Pangkat Digit (3–10)</h2>
+  <p class="axis">
+    Sumbu X: Jumlah Digit / Pangkat |
+    Sumbu Y: Waktu Eksekusi (ms)
+  </p>
+  <canvas id="digitChart"></canvas>
+</section>
+
+
+<!-- TABLE -->
+<section class="panel">
+  <h2><i class="fa-solid fa-table"></i> Tabel Analisis Performa</h2>
+
+  <table id="resultTable">
+    <thead>
+      <tr>
+        <th>Bilangan</th>
+        <th>Digit</th>
+        <th>Iteratif (ms)</th>
+        <th>Rekursif (ms)</th>
+        <th>Algoritma Tercepat</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+<footer>
+  <p>© 2025 — Advanced Algorithm Analysis (AKA)</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

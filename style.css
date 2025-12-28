@@ -1,0 +1,153 @@
+:root {
+  --bg: #020617;
+  --panel: #020617;
+  --card: #020617;
+  --primary: #38bdf8;
+  --secondary: #f472b6;
+  --accent: #22c55e;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #020617, #020617);
+  color: var(--text);
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  animation: fadeDown 1s;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+}
+
+.hero p {
+  opacity: 0.7;
+  margin-top: 10px;
+}
+
+/* CONTROLS */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card {
+  background: #020617;
+  padding: 15px;
+  border-radius: 14px;
+  box-shadow: 0 0 25px rgba(56,189,248,0.15);
+}
+
+.card label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+input {
+  margin-top: 8px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #020617;
+  color: white;
+}
+
+.primary-btn {
+  padding: 15px 25px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  font-weight: 600;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.primary-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px rgba(244,114,182,0.6);
+}
+
+/* STATUS */
+.status {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* PANEL */
+.panel {
+  width: 90%;
+  margin: 40px auto;
+  background: #020617;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 35px rgba(56,189,248,0.2);
+  animation: fadeUp 1s;
+}
+
+.axis {
+  opacity: 0.7;
+  margin-bottom: 15px;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+}
+
+thead {
+  background: #020617;
+}
+
+tbody tr {
+  animation: rowIn 0.6s;
+}
+
+tbody tr:hover {
+  background: #020617;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 25px;
+  opacity: 0.6;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes rowIn {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
