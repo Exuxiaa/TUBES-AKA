@@ -62,7 +62,7 @@ function measure(fn, repeat) {
     total += (end - start);
   }
 
-  return total / repeat; // 🔥 RATA-RATA
+  return total / repeat; // RATA-RATA
 }
 
 
@@ -100,7 +100,7 @@ function runAnalysis() {
   updateTable(num, digits, iterTime, recTime, repeat);
 
 
-  // 🔥 GRAFIK 3 — Analisis Pangkat Digit
+  // GRAFIK 3 — Analisis Pangkat Digit
   analyzeByDigit(repeat);
 }
 
@@ -125,7 +125,7 @@ function updateBar(iterAvg, recAvg) {
           recAvg.toFixed(4)
         ],
         backgroundColor: ["#38bdf8", "#f472b6"],
-        borderRadius: 12, // 🔥 biar kelihatan premium
+        borderRadius: 12, 
         barThickness: 70
       }]
     },
@@ -239,7 +239,7 @@ function analyzeByDigit(repeat) {
       repeat
     );
 
-    labels.push(num.toString()); // 🔥 X = NILAI EXACT
+    labels.push(num.toString()); // X = NILAI EXACT
     iterData.push(iterAvg.toFixed(4));
     recData.push(recAvg.toFixed(4));
   }
